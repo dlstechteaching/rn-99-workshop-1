@@ -1,6 +1,6 @@
-import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { IOnboardingItem } from "../types/onboarding";
-import { Navigation } from "./Navigation";
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { IOnboardingItem } from '../types/onboarding';
+import { Navigation } from './Navigation';
 
 export type AppStackNavigatorParamList = {
     [Navigation.Home] : undefined,
