@@ -1,5 +1,5 @@
 export interface IOnboardingItem {
-    title: string;
-    desc: string;
-    image: string;
+	title: string;
+	desc: string;
+	image: string;
 }

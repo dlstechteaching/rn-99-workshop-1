@@ -8,7 +8,7 @@ jest.mock('@react-navigation/native');
 describe('ScreenB tests', () => {
 	let component: ShallowWrapper;
 	const navigationMock = {
-		navigate: jest.fn()
+		navigate: jest.fn(),
 	};
 
 	beforeEach(() => {
@@ -27,5 +27,4 @@ describe('ScreenB tests', () => {
 	function thenItRendersProperly() {
 		expect(component).toMatchSnapshot();
 	}
-
 });

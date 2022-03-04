@@ -11,16 +11,10 @@ describe('MyEntryPoint tests', () => {
 	});
 
 	function givenComponent() {
-		component = shallow(
-			<MyEntryPoint 
-				iconName={'label'} 
-				title={'title'} 
-				desc={'desc'} />
-		);
+		component = shallow(<MyEntryPoint iconName={'label'} title={'title'} desc={'desc'} />);
 	}
 
 	function thenItRendersProperly() {
 		expect(component).toMatchSnapshot();
 	}
-
 });

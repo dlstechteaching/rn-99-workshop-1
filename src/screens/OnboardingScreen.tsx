@@ -14,36 +14,38 @@ export const OnboardingScreen: React.VFC = () => {
 
 	const currentStep = data[stepIndex];
 
-	const navigateToStep = (step: number) => 
+	const navigateToStep = (step: number) =>
 		navigation.navigate(Navigation.Onboarding, {
 			stepIndex: step,
-			data
+			data,
 		});
 
 	return (
 		<View style={styles.container}>
-			<StatusBar hidden/>
-			<Text style={styles.title} numberOfLines={2}>{ currentStep.title.toUpperCase() }</Text>
-			<Image source={currentStep.image as any} style={styles.image}/>
-			<Text style={styles.desc}>{ currentStep.desc.toUpperCase() }</Text>
+			<StatusBar hidden />
+			<Text style={styles.title} numberOfLines={2}>
+				{currentStep.title.toUpperCase()}
+			</Text>
+			<Image source={currentStep.image as any} style={styles.image} />
+			<Text style={styles.desc}>{currentStep.desc.toUpperCase()}</Text>
 			<View style={styles.footer}>
-				{
-					stepIndex != data.length - 1 ? (
-						<>
-							<TouchableOpacity onPress={() => navigateToStep(data.length - 1)}>
-								<Text>Skip</Text>
-							</TouchableOpacity>
-							<MyStepper stepIndex={stepIndex} nbOfSteps={data.length} width={'30%'} />
-							<TouchableOpacity onPress={() => navigateToStep(stepIndex + 1)}>
-								<Text>Next</Text>
-							</TouchableOpacity>
-						</> ): 
-						<>
-							<TouchableOpacity style={styles.cta} onPress={() => navigation.goBack()}>
-								<Text>Get Started</Text>
-							</TouchableOpacity>
-						</>
-				}
+				{stepIndex != data.length - 1 ? (
+					<>
+						<TouchableOpacity onPress={() => navigateToStep(data.length - 1)}>
+							<Text>Skip</Text>
+						</TouchableOpacity>
+						<MyStepper stepIndex={stepIndex} nbOfSteps={data.length} width={'30%'} />
+						<TouchableOpacity onPress={() => navigateToStep(stepIndex + 1)}>
+							<Text>Next</Text>
+						</TouchableOpacity>
+					</>
+				) : (
+					<>
+						<TouchableOpacity style={styles.cta} onPress={() => navigation.goBack()}>
+							<Text>Get Started</Text>
+						</TouchableOpacity>
+					</>
+				)}
 			</View>
 		</View>
 	);
@@ -53,11 +55,11 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		flexDirection: 'column',
-		padding: 40 ,
+		padding: 40,
 		width: '100%',
 		backgroundColor: 'white',
 		justifyContent: 'space-around',
-		alignItems: 'center'
+		alignItems: 'center',
 	},
 	title: {
 		marginTop: 20,
@@ -65,27 +67,27 @@ const styles = StyleSheet.create({
 		textAlign: 'center',
 		height: '7%',
 	},
-	image : {
+	image: {
 		width: '80%',
 		height: '40%',
 		justifyContent: 'space-between',
-		overflow: 'visible'
+		overflow: 'visible',
 	},
 	desc: {
 		marginTop: 20,
 		fontSize: 16,
-		textAlign: 'center'
+		textAlign: 'center',
 	},
-	footer : {
+	footer: {
 		flexDirection: 'row',
 		width: '100%',
-		justifyContent: 'space-between'
+		justifyContent: 'space-between',
 	},
-	cta : {
+	cta: {
 		padding: 20,
 		width: '100%',
 		alignItems: 'center',
 		backgroundColor: 'rgb(241, 170, 102)',
-		borderRadius: 10
-	}
+		borderRadius: 10,
+	},
 });

@@ -19,9 +19,7 @@ describe('MyButton tests', () => {
 	});
 
 	function givenComponent() {
-		component = shallow(
-			<MyButton label={'label'} onPress={onPressMock} />
-		);
+		component = shallow(<MyButton label={'label'} onPress={onPressMock} />);
 	}
 
 	function whenButtonIsPressed() {

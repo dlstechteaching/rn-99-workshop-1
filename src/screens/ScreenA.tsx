@@ -1,26 +1,22 @@
-import { Image, StyleSheet, View, Text, TouchableOpacity  } from 'react-native';
+import { Image, StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import images from '../assets';
 import { Ionicons } from '@expo/vector-icons';
 import { StatusBar } from 'expo-status-bar';
 import { useNavigation } from '@react-navigation/native';
 
-export const ScreenA : React.VFC = () => {
-
+export const ScreenA: React.VFC = () => {
 	const { goBack } = useNavigation();
 
 	return (
 		<View style={styles.container}>
 			<StatusBar />
-			<Image
-				source={images.woman}
-				style={styles.woman}
-			/>
+			<Image source={images.woman} style={styles.woman} />
 			<View style={styles.textContainer}>
 				<Text style={styles.title} numberOfLines={2}>
-                Never more in rush
+					Never more in rush
 				</Text>
 				<Text style={styles.subtitle}>
-                Check and keep up under control your daily task, is a creative way.
+					Check and keep up under control your daily task, is a creative way.
 				</Text>
 			</View>
 			<TouchableOpacity onPress={goBack} style={styles.button}>
@@ -37,19 +33,19 @@ const styles = StyleSheet.create({
 		padding: 30,
 		width: '100%',
 		backgroundColor: 'white',
-		justifyContent: 'space-around'
+		justifyContent: 'space-around',
 	},
 	woman: {
 		marginTop: 40,
 		alignSelf: 'flex-start',
-		aspectRatio: 2/3,
+		aspectRatio: 2 / 3,
 		overflow: 'visible',
 		marginLeft: 5,
-		marginBottom: -40
+		marginBottom: -40,
 	},
-	textContainer : {
+	textContainer: {
 		width: '70%',
-		justifyContent: 'space-between'
+		justifyContent: 'space-between',
 	},
 	button: {
 		alignSelf: 'flex-end',
@@ -60,16 +56,14 @@ const styles = StyleSheet.create({
 		width: 45,
 		display: 'flex',
 		alignItems: 'center',
-		justifyContent: 'center'
+		justifyContent: 'center',
 	},
-	title : {
+	title: {
 		fontSize: 44,
-		marginBottom: 10
+		marginBottom: 10,
 	},
 	subtitle: {
 		fontSize: 16,
-		color: 'rgb(178, 178, 178)'
+		color: 'rgb(178, 178, 178)',
 	},
-
-  
 });

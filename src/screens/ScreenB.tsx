@@ -1,4 +1,4 @@
-import { StyleSheet, View, TouchableOpacity, Image, Text, ScrollView  } from 'react-native';
+import { StyleSheet, View, TouchableOpacity, Image, Text, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { StatusBar } from 'expo-status-bar';
 import images from '../assets';
@@ -6,33 +6,30 @@ import { useNavigation } from '@react-navigation/native';
 import { MyCard } from '../components/common/MyCard';
 import { dataForBScreen } from './hardcoded_data';
 
-export const ScreenB : React.VFC = () => {
+export const ScreenB: React.VFC = () => {
 	const { goBack } = useNavigation();
 
-	const cards = dataForBScreen;    
-    
+	const cards = dataForBScreen;
+
 	return (
 		<View style={styles.container}>
 			<StatusBar />
 			<View style={styles.headerContainer}>
 				<View>
-					<Text style={styles.title}>
-                   My Tasks
-					</Text>
-					<Text style={styles.subtitle}>
-                    You have 4 tasks today
-					</Text>
+					<Text style={styles.title}>My Tasks</Text>
+					<Text style={styles.subtitle}>You have 4 tasks today</Text>
 				</View>
 				<Image source={images.profile} />
 			</View>
-			<ScrollView 
+			<ScrollView
 				horizontal
-				style={{overflow: 'visible'}}
+				style={{ overflow: 'visible' }}
 				showsVerticalScrollIndicator={false}
-				contentContainerStyle={styles.contentContainer}>
-				{
-					cards.map((card: any) => <MyCard key={card.uid} {...card}/>)
-				}
+				contentContainerStyle={styles.contentContainer}
+			>
+				{cards.map((card: any) => (
+					<MyCard key={card.uid} {...card} />
+				))}
 			</ScrollView>
 			<TouchableOpacity onPress={goBack} style={styles.button}>
 				<Ionicons name={'ios-add-sharp'} size={18} color="green" />
@@ -48,27 +45,27 @@ const styles = StyleSheet.create({
 		padding: 30,
 		width: '100%',
 		backgroundColor: 'rgb(88, 191, 193)',
-		justifyContent: 'space-between'
+		justifyContent: 'space-between',
 	},
-	headerContainer: { 
+	headerContainer: {
 		marginTop: 120,
 		flexDirection: 'row',
 		justifyContent: 'space-between',
 		alignItems: 'center',
-		marginBottom: 40
+		marginBottom: 40,
 	},
-	title : {
+	title: {
 		fontSize: 32,
-		color: 'white'
+		color: 'white',
 	},
 	subtitle: {
 		fontSize: 16,
 		color: 'white',
-		opacity: 0.7
+		opacity: 0.7,
 	},
-	contentContainer : {
+	contentContainer: {
 		overflow: 'visible',
-		height: '70%'
+		height: '70%',
 	},
 	button: {
 		alignSelf: 'center',
@@ -83,9 +80,8 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 		shadowColor: '#000',
 		shadowOffset: { width: 1, height: 1 },
-		shadowOpacity:  0.4,
+		shadowOpacity: 0.4,
 		shadowRadius: 3,
 		elevation: 5,
 	},
-
 });

@@ -1,9 +1,9 @@
 module.exports = {
-	'env': {
+	env: {
 		'es2021': true,
 		'node': true
 	},
-	'extends': [
+	extends: [
 		'eslint:recommended',
 		'plugin:react/recommended',
 		'plugin:react-hooks/recommended',
@@ -11,8 +11,8 @@ module.exports = {
 		'plugin:@typescript-eslint/recommended',
 		'plugin:@typescript-eslint/recommended-requiring-type-checking',
 	],
-	'parser': '@typescript-eslint/parser',
-	'parserOptions': {
+	parser: '@typescript-eslint/parser',
+	parserOptions: {
 		'ecmaFeatures': {
 			'jsx': true
 		},
@@ -20,12 +20,13 @@ module.exports = {
 		'sourceType': 'module',
 		'project': './tsconfig.json',
 	},
-	'plugins': [
+	plugins: [
 		'react',
 		'@typescript-eslint',
-		'react-hooks'
+		'react-hooks',
+		'prettier'
 	],
-	'rules': {
+	rules: {
 		'indent': [
 			'error',
 			'tab'
@@ -54,9 +55,10 @@ module.exports = {
 		'@typescript-eslint/unbound-method': 'off',
 		'@typescript-eslint/no-explicit-any': 'off',
 		'@typescript-eslint/no-unsafe-member-access': 'off',
-		'@typescript-eslint/no-unsafe-call': 'off'
+		'@typescript-eslint/no-unsafe-call': 'off',
+		'prettier/prettier': 'warn',
 	},
-	'settings': {
+	settings: {
 		'react': {
 		  'version': 'detect',
 		},

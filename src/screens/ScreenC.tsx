@@ -1,24 +1,29 @@
-import { StyleSheet, View, Text, SectionList, TouchableOpacity, ImageBackground  } from 'react-native';
+import {
+	StyleSheet,
+	View,
+	Text,
+	SectionList,
+	TouchableOpacity,
+	ImageBackground,
+} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { dataForCScreen } from './hardcoded_data';
 import { MyEntryPoint } from '../components/common/MyEntryPoint';
-import { Ionicons } from '@expo/vector-icons'; 
+import { Ionicons } from '@expo/vector-icons';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import images from '../assets';
 
-export const ScreenC : React.VFC = () => {
+export const ScreenC: React.VFC = () => {
 	const { goBack } = useNavigation();
 
 	const sections = dataForCScreen;
-    
+
 	return (
 		<View style={styles.container}>
-			<StatusBar hidden={true}/>
+			<StatusBar hidden={true} />
 			<View style={styles.navbarWrapper}>
-				<SafeAreaView 
-					edges={['left', 'top', 'right']}
-					style={styles.navbar}>
+				<SafeAreaView edges={['left', 'top', 'right']} style={styles.navbar}>
 					<View style={styles.navLeft}>
 						<TouchableOpacity onPress={goBack} style={styles.button}>
 							<Ionicons name={'arrow-back'} size={32} color="grey" />
@@ -32,17 +37,17 @@ export const ScreenC : React.VFC = () => {
 			</View>
 
 			<View style={styles.header}>
-				<ImageBackground 
-					source={images.settings} 
-					resizeMode="contain" 
-					style={styles.image} 
-					imageStyle={{ height: '100%' , width: 'auto', right: -100 }}
+				<ImageBackground
+					source={images.settings}
+					resizeMode="contain"
+					style={styles.image}
+					imageStyle={{ height: '100%', width: 'auto', right: -100 }}
 				>
 					<View style={styles.textHeader}>
 						<Text style={styles.titleHeader}>Check your profile</Text>
 						<Text style={styles.subtitleHeader}>jonathansmith@gmail.com</Text>
 						<TouchableOpacity onPress={goBack} style={styles.buttonHeader}>
-							<Text style={{ color: 'black'}}>View</Text>
+							<Text style={{ color: 'black' }}>View</Text>
 						</TouchableOpacity>
 					</View>
 				</ImageBackground>
@@ -67,7 +72,7 @@ const styles = StyleSheet.create({
 		padding: 30,
 		width: '100%',
 		backgroundColor: 'rgb(253, 246, 239)',
-		justifyContent: 'space-between'
+		justifyContent: 'space-between',
 	},
 	navbarWrapper: {
 		flexDirection: 'row',
@@ -77,13 +82,13 @@ const styles = StyleSheet.create({
 	navbar: {
 		width: '100%',
 		flexDirection: 'row',
-		alignItems: 'center'
+		alignItems: 'center',
 	},
 	navLeft: {
 		alignItems: 'flex-start',
 		flex: 1,
 	},
-	navCenter: {  
+	navCenter: {
 		alignItems: 'center',
 		flex: 3,
 	},
@@ -91,17 +96,17 @@ const styles = StyleSheet.create({
 		alignItems: 'flex-end',
 		flex: 1,
 	},
-	header: { 
+	header: {
 		backgroundColor: 'white',
 		marginVertical: 10,
 		borderRadius: 10,
 		height: '20%',
-		overflow: 'hidden'
+		overflow: 'hidden',
 	},
 	image: {
 		flex: 1,
 		justifyContent: 'flex-start',
-		overflow: 'hidden'
+		overflow: 'hidden',
 	},
 	textHeader: {
 		paddingLeft: 30,
@@ -110,12 +115,12 @@ const styles = StyleSheet.create({
 	},
 	titleHeader: {
 		fontSize: 22,
-		marginBottom: 5
+		marginBottom: 5,
 	},
 	subtitleHeader: {
 		fontSize: 12,
 		color: 'rgb(152, 152, 152)',
-		marginBottom: 20
+		marginBottom: 20,
 	},
 	buttonHeader: {
 		height: 45,
@@ -123,10 +128,10 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		justifyContent: 'center',
 		backgroundColor: 'rgb(241, 170, 105)',
-		borderRadius: 15
+		borderRadius: 15,
 	},
-	sectionTitle : {
-		padding: 10
+	sectionTitle: {
+		padding: 10,
 	},
 	button: {
 		borderRadius: 35,
@@ -138,5 +143,4 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		justifyContent: 'center',
 	},
-
 });

@@ -8,12 +8,12 @@ jest.mock('@react-navigation/native');
 describe('HomeScreen tests', () => {
 	let component: ShallowWrapper;
 	const navigationMock = {
-		navigate: jest.fn()
+		navigate: jest.fn(),
 	};
 
 	const itemMock = {
 		label: 'test',
-		screenName: 'screen'
+		screenName: 'screen',
 	};
 
 	beforeEach(() => {
@@ -36,18 +36,19 @@ describe('HomeScreen tests', () => {
 	}
 
 	function whenFirstMyButtonIsClicked() {
-
 		component
 			.find('FlatList')
 			.props()
-		// @ts-ignore
-			.keyExtractor({ id: 1}, 0);
+			// @ts-ignore
+			.keyExtractor({ id: 1 }, 0);
 
-		const firstButton = shallow(component
-			.find('FlatList')
-			.props()
-		// @ts-ignore
-			.renderItem({ item: itemMock}));
+		const firstButton = shallow(
+			component
+				.find('FlatList')
+				.props()
+				// @ts-ignore
+				.renderItem({ item: itemMock }),
+		);
 		// @ts-ignore
 		firstButton.props().onPress();
 	}
@@ -59,5 +60,4 @@ describe('HomeScreen tests', () => {
 	function thenItNavigates() {
 		expect(navigationMock.navigate).toHaveBeenCalled();
 	}
-
 });

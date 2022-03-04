@@ -11,15 +11,10 @@ describe('MyStepper tests', () => {
 	});
 
 	function givenComponent() {
-		component = shallow(
-			<MyStepper 
-				stepIndex={0} 
-				nbOfSteps={4}  />
-		);
+		component = shallow(<MyStepper stepIndex={0} nbOfSteps={4} />);
 	}
 
 	function thenItRendersProperly() {
 		expect(component).toMatchSnapshot();
 	}
-
 });

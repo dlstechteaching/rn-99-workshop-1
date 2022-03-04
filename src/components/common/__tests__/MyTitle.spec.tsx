@@ -11,13 +11,10 @@ describe('MyTitle tests', () => {
 	});
 
 	function givenComponent() {
-		component = shallow(
-			<MyTitle label={'label'} />
-		);
+		component = shallow(<MyTitle label={'label'} />);
 	}
 
 	function thenItRendersProperly() {
 		expect(component).toMatchSnapshot();
 	}
-
 });

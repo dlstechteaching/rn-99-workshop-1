@@ -7,12 +7,12 @@ jest.mock('@react-navigation/native');
 describe('ScreenC tests', () => {
 	let component: ShallowWrapper;
 	const navigationMock = {
-		navigate: jest.fn()
+		navigate: jest.fn(),
 	};
 
 	const itemMock = {
 		title: 'test',
-		iconName: 'iconName'
+		iconName: 'iconName',
 	};
 
 	beforeEach(() => {
@@ -34,32 +34,34 @@ describe('ScreenC tests', () => {
 	}
 
 	function thenItRendersListProperly() {
+		shallow(
+			component
+				.find('SectionList')
+				.props()
+				// @ts-ignore
+				.renderSectionHeader({
+					section: {
+						title: 'title',
+					},
+				}),
+		);
 
-		shallow(component
-			.find('SectionList')
-			.props()
-		// @ts-ignore
-			.renderSectionHeader({
-				section: {
-					title: 'title'
-				}
-			}));
-    
 		component
 			.find('SectionList')
 			.props()
-		// @ts-ignore
-			.keyExtractor({ title: 't'}, 0);
+			// @ts-ignore
+			.keyExtractor({ title: 't' }, 0);
 
-		shallow(component
-			.find('SectionList')
-			.props()
-		// @ts-ignore
-			.renderItem({ item: itemMock}));
+		shallow(
+			component
+				.find('SectionList')
+				.props()
+				// @ts-ignore
+				.renderItem({ item: itemMock }),
+		);
 	}
 
 	function thenItRendersProperly() {
 		expect(component).toMatchSnapshot();
 	}
-
 });

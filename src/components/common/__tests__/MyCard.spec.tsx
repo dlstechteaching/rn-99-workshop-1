@@ -12,17 +12,17 @@ describe('MyCard tests', () => {
 
 	function givenComponent() {
 		component = shallow(
-			<MyCard 
-				type={'label'} 
-				title={'title'} 
-				desc={'desc'} 
-				badges={['test']} 
-				comments={['test', 'test']} />
+			<MyCard
+				type={'label'}
+				title={'title'}
+				desc={'desc'}
+				badges={['test']}
+				comments={['test', 'test']}
+			/>,
 		);
 	}
 
 	function thenItRendersProperly() {
 		expect(component).toMatchSnapshot();
 	}
-
 });

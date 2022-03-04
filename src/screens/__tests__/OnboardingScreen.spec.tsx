@@ -11,13 +11,13 @@ describe('OnboardingScreen tests', () => {
 	let component: ShallowWrapper;
 	const navigationMock = {
 		navigate: jest.fn(),
-		goBack: jest.fn()
+		goBack: jest.fn(),
 	};
 	const routeMockDefault = {
 		params: {
 			stepIndex: 0,
-			data: dataForOnboardingScreen
-		}
+			data: dataForOnboardingScreen,
+		},
 	};
 
 	beforeEach(() => {
@@ -34,8 +34,8 @@ describe('OnboardingScreen tests', () => {
 		givenUseRoute({
 			params: {
 				stepIndex: dataForOnboardingScreen.length - 1,
-				data: dataForOnboardingScreen
-			}
+				data: dataForOnboardingScreen,
+			},
 		});
 		givenComponent();
 		thenItRendersProperly();
@@ -59,8 +59,8 @@ describe('OnboardingScreen tests', () => {
 		givenUseRoute({
 			params: {
 				stepIndex: dataForOnboardingScreen.length - 1,
-				data: dataForOnboardingScreen
-			}
+				data: dataForOnboardingScreen,
+			},
 		});
 		givenComponent();
 		whenCtaIsClicked();
@@ -91,15 +91,14 @@ describe('OnboardingScreen tests', () => {
 		expect(component).toMatchSnapshot();
 	}
 
-	function thenItNavigatesTo(step: number){
+	function thenItNavigatesTo(step: number) {
 		expect(navigationMock.navigate).toHaveBeenCalledWith(Navigation.Onboarding, {
 			stepIndex: step,
-			data: dataForOnboardingScreen
+			data: dataForOnboardingScreen,
 		});
 	}
 
-	function thenItGoesBack(){
+	function thenItGoesBack() {
 		expect(navigationMock.goBack).toHaveBeenCalled();
 	}
-
 });
