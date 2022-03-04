@@ -19,7 +19,7 @@
       "eslint --ext .tsx --ext .ts src/"
     ],
     "./src/**": [
-      "prettier ./src"
+      "prettier ."
     ]
   },
   "husky": {
