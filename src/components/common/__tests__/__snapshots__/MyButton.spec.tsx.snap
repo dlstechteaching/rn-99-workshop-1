@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyButton tests should render properly 1`] = `
+<ForwardRef
+  onPress={[MockFunction]}
+  style={
+    Object {
+      "backgroundColor": "rgba(92, 45, 145, 1)",
+      "borderBottomEndRadius": 15,
+      "borderRadius": 3,
+      "marginVertical": 20,
+      "padding": 10,
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "textAlign": "center",
+      }
+    }
+  >
+    label
+  </Text>
+</ForwardRef>
+`;

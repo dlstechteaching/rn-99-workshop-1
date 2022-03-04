@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScreenB tests should render properly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "rgb(88, 191, 193)",
+      "flex": 1,
+      "flexDirection": "column",
+      "justifyContent": "space-between",
+      "padding": 30,
+      "width": "100%",
+    }
+  }
+>
+  <ExpoStatusBar />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginBottom": 40,
+        "marginTop": 120,
+      }
+    }
+  >
+    <View>
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 32,
+          }
+        }
+      >
+        My Tasks
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 16,
+            "opacity": 0.7,
+          }
+        }
+      >
+        You have 4 tasks today
+      </Text>
+    </View>
+    <Image
+      source={1}
+    />
+  </View>
+  <ScrollView
+    contentContainerStyle={
+      Object {
+        "height": "70%",
+        "overflow": "visible",
+      }
+    }
+    horizontal={true}
+    showsVerticalScrollIndicator={false}
+    style={
+      Object {
+        "overflow": "visible",
+      }
+    }
+  >
+    <MyCard
+      badges={
+        Array [
+          "#Design",
+          "#Visual",
+          "#SPRINT 2",
+        ]
+      }
+      comments={
+        Array [
+          "test",
+          "test",
+          "test",
+        ]
+      }
+      desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies commodo erat, vel laoreet mi porta eget. Donec blandit orci mollis ex auctor, in hendrerit nunc pretium"
+      key="0"
+      title="Create a new landing page Hero image"
+      type="DESIGN"
+      uid={0}
+    />
+    <MyCard
+      badges={
+        Array [
+          "#Design",
+          "#Visual",
+          "#SPRINT 2",
+        ]
+      }
+      comments={
+        Array [
+          "test",
+          "test",
+          "test",
+        ]
+      }
+      desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies commodo erat, vel laoreet mi porta eget. Donec blandit orci mollis ex auctor, in hendrerit nunc pretium"
+      key="1"
+      title="Create a new landing page Hero image"
+      type="DESIGN"
+      uid={1}
+    />
+    <MyCard
+      badges={
+        Array [
+          "#Design",
+          "#Visual",
+          "#SPRINT 2",
+        ]
+      }
+      comments={
+        Array [
+          "test",
+          "test",
+          "test",
+        ]
+      }
+      desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies commodo erat, vel laoreet mi porta eget. Donec blandit orci mollis ex auctor, in hendrerit nunc pretium"
+      key="2"
+      title="Create a new landing page Hero image"
+      type="DESIGN"
+      uid={2}
+    />
+  </ScrollView>
+  <ForwardRef
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "backgroundColor": "rgb(236, 248, 248)",
+        "borderRadius": 35,
+        "display": "flex",
+        "elevation": 5,
+        "flexShrink": 1,
+        "height": 55,
+        "justifyContent": "center",
+        "marginBottom": 30,
+        "shadowColor": "#000",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 1,
+        },
+        "shadowOpacity": 0.4,
+        "shadowRadius": 3,
+        "width": 55,
+      }
+    }
+  >
+    <Icon
+      allowFontScaling={false}
+      color="green"
+      name="ios-add-sharp"
+      size={18}
+    />
+  </ForwardRef>
+</View>
+`;

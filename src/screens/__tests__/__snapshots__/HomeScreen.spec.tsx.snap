@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeScreen tests should render properly 1`] = `
+<ForwardRef(SafeAreaView)
+  style={
+    Object {
+      "flex": 1,
+      "marginTop": 0,
+      "padding": 20,
+    }
+  }
+>
+  <MyTitle
+    label="Workshop #1"
+  />
+  <FlatList
+    data={
+      Array [
+        Object {
+          "id": "0",
+          "label": "Screen a",
+          "screenName": "app.ex.a",
+        },
+        Object {
+          "id": "1",
+          "label": "Screen b",
+          "screenName": "app.ex.b",
+        },
+        Object {
+          "id": "2",
+          "label": "Screen c",
+          "screenName": "app.ex.c",
+        },
+        Object {
+          "id": "3",
+          "label": "Onboarding",
+          "params": Object {
+            "data": Array [
+              Object {
+                "desc": "We can help you to be a better version of yourself",
+                "image": 1,
+                "title": "Welcome to monumental habits",
+              },
+              Object {
+                "desc": "We can help you to be a better version of yourself",
+                "image": 1,
+                "title": "Create new habit easily",
+              },
+              Object {
+                "desc": "We can help you to be a better version of yourself",
+                "image": 1,
+                "title": "Keep track of your progress",
+              },
+              Object {
+                "desc": "We can help you to be a better version of yourself",
+                "image": 1,
+                "title": "Join a supportive community",
+              },
+            ],
+            "stepIndex": 0,
+          },
+          "screenName": "app.onboarding",
+        },
+      ]
+    }
+    disableVirtualization={false}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onEndReachedThreshold={2}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    style={
+      Object {
+        "padding": 20,
+      }
+    }
+    updateCellsBatchingPeriod={50}
+    windowSize={21}
+  />
+</ForwardRef(SafeAreaView)>
+`;

@@ -1,0 +1,236 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScreenC tests should render properly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "rgb(253, 246, 239)",
+      "flex": 1,
+      "flexDirection": "column",
+      "justifyContent": "space-between",
+      "padding": 30,
+      "width": "100%",
+    }
+  }
+>
+  <ExpoStatusBar
+    hidden={true}
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <RNCSafeAreaView
+      edges={
+        Array [
+          "left",
+          "top",
+          "right",
+        ]
+      }
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "flex-start",
+            "flex": 1,
+          }
+        }
+      >
+        <ForwardRef
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "rgb(220, 205, 207)",
+              "borderRadius": 35,
+              "display": "flex",
+              "flexShrink": 1,
+              "height": 55,
+              "justifyContent": "center",
+              "width": 55,
+            }
+          }
+        >
+          <Icon
+            allowFontScaling={false}
+            color="grey"
+            name="arrow-back"
+            size={32}
+          />
+        </ForwardRef>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 3,
+          }
+        }
+      >
+        <Text>
+          Settings
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "flex": 1,
+          }
+        }
+      />
+    </RNCSafeAreaView>
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "white",
+        "borderRadius": 10,
+        "height": "20%",
+        "marginVertical": 10,
+        "overflow": "hidden",
+      }
+    }
+  >
+    <ImageBackground
+      imageStyle={
+        Object {
+          "height": "100%",
+          "right": -100,
+          "width": "auto",
+        }
+      }
+      resizeMode="contain"
+      source={1}
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "flex-start",
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "column",
+            "paddingLeft": 30,
+            "paddingVertical": 15,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "fontSize": 22,
+              "marginBottom": 5,
+            }
+          }
+        >
+          Check your profile
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "rgb(152, 152, 152)",
+              "fontSize": 12,
+              "marginBottom": 20,
+            }
+          }
+        >
+          jonathansmith@gmail.com
+        </Text>
+        <ForwardRef
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "rgb(241, 170, 105)",
+              "borderRadius": 15,
+              "height": 45,
+              "justifyContent": "center",
+              "width": "40%",
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "black",
+              }
+            }
+          >
+            View
+          </Text>
+        </ForwardRef>
+      </View>
+    </ImageBackground>
+  </View>
+  <SectionList
+    data={Array []}
+    disableVirtualization={false}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    onEndReachedThreshold={2}
+    renderItem={[Function]}
+    renderSectionHeader={[Function]}
+    scrollEventThrottle={50}
+    sections={
+      Array [
+        Object {
+          "data": Array [
+            Object {
+              "desc": "Customize notifications",
+              "iconName": "ios-notifications-outline",
+              "title": "Notifications",
+            },
+            Object {
+              "desc": "Customize it more to fit your usage",
+              "iconName": "ellipsis-horizontal-outline",
+              "title": "More customization",
+            },
+          ],
+          "title": "General",
+        },
+        Object {
+          "data": Array [
+            Object {
+              "iconName": "phone-portrait-outline",
+              "title": "Contact",
+            },
+            Object {
+              "iconName": "mail",
+              "title": "Feedback",
+            },
+            Object {
+              "iconName": "shield",
+              "title": "Privacy Policy",
+            },
+            Object {
+              "iconName": "alert-outline",
+              "title": "About",
+            },
+          ],
+          "title": "Support",
+        },
+      ]
+    }
+    stickySectionHeadersEnabled={true}
+    updateCellsBatchingPeriod={50}
+    windowSize={21}
+  />
+</View>
+`;

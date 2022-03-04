@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScreenA tests should render properly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "flex": 1,
+      "flexDirection": "column",
+      "justifyContent": "space-around",
+      "padding": 30,
+      "width": "100%",
+    }
+  }
+>
+  <ExpoStatusBar />
+  <Image
+    source={1}
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "aspectRatio": 0.6666666666666666,
+        "marginBottom": -40,
+        "marginLeft": 5,
+        "marginTop": 40,
+        "overflow": "visible",
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "justifyContent": "space-between",
+        "width": "70%",
+      }
+    }
+  >
+    <Text
+      numberOfLines={2}
+      style={
+        Object {
+          "fontSize": 44,
+          "marginBottom": 10,
+        }
+      }
+    >
+      Never more in rush
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "rgb(178, 178, 178)",
+          "fontSize": 16,
+        }
+      }
+    >
+      Check and keep up under control your daily task, is a creative way.
+    </Text>
+  </View>
+  <ForwardRef
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "flex-end",
+        "backgroundColor": "rgb(236, 248, 248)",
+        "borderRadius": 25,
+        "display": "flex",
+        "flexShrink": 1,
+        "height": 45,
+        "justifyContent": "center",
+        "width": 45,
+      }
+    }
+  >
+    <Icon
+      allowFontScaling={false}
+      color="green"
+      name="md-arrow-forward"
+      size={18}
+    />
+  </ForwardRef>
+</View>
+`;

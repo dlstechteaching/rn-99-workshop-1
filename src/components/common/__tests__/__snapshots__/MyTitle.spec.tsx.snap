@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyTitle tests should render properly 1`] = `
+<View
+  style={
+    Object {
+      "marginVertical": 50,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "black",
+        "fontSize": 35,
+        "fontWeight": "bold",
+        "textAlign": "center",
+      }
+    }
+  >
+    label
+  </Text>
+</View>
+`;
